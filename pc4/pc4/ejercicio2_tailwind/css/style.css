@@ -1,0 +1,79 @@
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS TAILWIND CSS - REUSE MARKET (EJERCICIO 2)
+   ========================================================================== */
+
+/* Componentes de Utilidad Reutilizables (para evitar repetición masiva de clases) */
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+.btn-secondary {
+  background-color: #f59e0b;
+  color: #0f172a;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background-color: #d97706;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 2px solid #e2e8f0;
+  color: #334155;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: #10b981;
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.custom-card {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* Transiciones de Menú Lateral */
+.mobile-sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+.mobile-sidebar.hidden-sidebar {
+  transform: translateX(-100%);
+}

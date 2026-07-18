@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reuse Market - Marketplace de Economía Circular</title>
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                        },
+                        secondary: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        },
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light text-slate-700 font-sans min-h-screen flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-dark font-heading">
+                🌱 <span class="text-primary-600">REUSE</span>MARKET
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="text-primary-600 font-semibold">Inicio</a>
+                <a href="catalogo.html" class="text-slate-600 hover:text-primary-600 font-medium transition-colors">Catálogo</a>
+                <a href="detalle.html" class="text-slate-600 hover:text-primary-600 font-medium transition-colors">Detalle Producto</a>
+                <a href="perfil.html" class="text-slate-600 hover:text-primary-600 font-medium transition-colors">Vendedor</a>
+                <a href="carrito.html" class="text-slate-600 hover:text-primary-600 font-medium transition-colors">Carrito</a>
+                <a href="publicar.html" class="text-slate-600 hover:text-primary-600 font-medium transition-colors">Publicar</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="carrito.html" class="relative p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors" aria-label="Carrito">
+                    🛒
+                    <span class="absolute -top-1 -right-1 bg-primary-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span>
+                </a>
+                <a href="publicar.html" class="btn-primary py-2 px-4 text-sm">Vender Artículo</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section con propuesta de valor -->
+        <section class="bg-gradient-to-br from-primary-50 to-white py-16 sm:py-24 border-b border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <span class="inline-block bg-primary-100 text-primary-700 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4">Economía Circular</span>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-dark font-heading leading-tight mb-6">Compra, Vende e Intercambia con Sostenibilidad</h1>
+                    <p class="text-lg sm:text-xl text-slate-500 mb-8">Únete a la plataforma líder de productos de segunda mano certificados. Reduce tu huella de carbono y ahorra en tu comunidad.</p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="catalogo.html" class="btn-primary text-base px-6 py-3">Explorar Catálogo</a>
+                        <a href="publicar.html" class="btn-outline text-base px-6 py-3 bg-white">Cómo Funciona</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías destacadas -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-dark font-heading">Categorías Populares</h2>
+                    <p class="text-slate-500 mt-2">Encuentra todo lo que necesitas para un estilo de vida consciente.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <a href="catalogo.html" class="p-6 bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-500 rounded-xl text-center transition-all group">
+                        <span class="text-4xl block mb-4 group-hover:scale-110 transition-transform">💻</span>
+                        <h3 class="font-bold text-dark text-base">Tecnología</h3>
+                        <p class="text-xs text-slate-400 mt-1">Laptops, celulares, tablets</p>
+                    </a>
+                    <a href="catalogo.html" class="p-6 bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-500 rounded-xl text-center transition-all group">
+                        <span class="text-4xl block mb-4 group-hover:scale-110 transition-transform">👕</span>
+                        <h3 class="font-bold text-dark text-base">Ropa & Accesorios</h3>
+                        <p class="text-xs text-slate-400 mt-1">Vestimenta vintage y casual</p>
+                    </a>
+                    <a href="catalogo.html" class="p-6 bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-500 rounded-xl text-center transition-all group">
+                        <span class="text-4xl block mb-4 group-hover:scale-110 transition-transform">📚</span>
+                        <h3 class="font-bold text-dark text-base">Libros & Ocio</h3>
+                        <p class="text-xs text-slate-400 mt-1">Novelas, cursos, revistas</p>
+                    </a>
+                    <a href="catalogo.html" class="p-6 bg-slate-50 hover:bg-primary-50 border border-slate-200 hover:border-primary-500 rounded-xl text-center transition-all group">
+                        <span class="text-4xl block mb-4 group-hover:scale-110 transition-transform">🚲</span>
+                        <h3 class="font-bold text-dark text-base">Deportes & Hogar</h3>
+                        <p class="text-xs text-slate-400 mt-1">Bicicletas, muebles, fitness</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos destacados -->
+        <section class="py-16 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-end mb-12">
+                    <div>
+                        <h2 class="text-3xl font-bold text-dark font-heading">Productos Destacados</h2>
+                        <p class="text-slate-500 mt-1">Verificados e inspeccionados por nuestro equipo local.</p>
+                    </div>
+                    <a href="catalogo.html" class="text-primary-600 hover:text-primary-700 font-semibold transition-colors">Ver Todo &rarr;</a>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Producto 1 -->
+                    <article class="custom-card flex flex-col">
+                        <div class="relative overflow-hidden aspect-video bg-slate-200">
+                            <img src="assets/images/hero-bg.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" alt="Laptop reacondicionada">
+                            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Reacondicionado</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-lg text-dark mb-1">MacBook Pro M1 (8GB / 256GB)</h3>
+                            <p class="text-sm text-slate-500 mb-4 flex-grow">Prácticamente nueva, sin rayaduras ni daños. Batería al 94% de capacidad.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+                                <span class="text-lg font-bold text-dark">S/. 2,800.00</span>
+                                <a href="detalle.html" class="btn-primary py-2 px-3 text-xs">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2 -->
+                    <article class="custom-card flex flex-col">
+                        <div class="relative overflow-hidden aspect-video bg-slate-200">
+                            <img src="assets/images/event-bg.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" alt="Bicicleta de montaña">
+                            <span class="absolute top-3 left-3 bg-emerald-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Como Nuevo</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-lg text-dark mb-1">Bicicleta de Montaña Trek 3500</h3>
+                            <p class="text-sm text-slate-500 mb-4 flex-grow">Llantas nuevas, frenos de disco hidráulicos recién calibrados y mantenimientos al día.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+                                <span class="text-lg font-bold text-dark">S/. 950.00</span>
+                                <a href="detalle.html" class="btn-primary py-2 px-3 text-xs">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 3 -->
+                    <article class="custom-card flex flex-col">
+                        <div class="relative overflow-hidden aspect-video bg-slate-200">
+                            <img src="assets/images/hero-bg.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" alt="Libros antiguos">
+                            <span class="absolute top-3 left-3 bg-amber-500 text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Usado Bueno</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-bold text-lg text-dark mb-1">Enciclopedia de las Ciencias (12 Tomos)</h3>
+                            <p class="text-sm text-slate-500 mb-4 flex-grow">Libros de tapa dura con ilustraciones a color. Hojas en excelente estado, sin rayaduras.</p>
+                            <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+                                <span class="text-lg font-bold text-dark">S/. 180.00</span>
+                                <a href="detalle.html" class="btn-primary py-2 px-3 text-xs">Ver Oferta</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg font-heading mb-4">REUSE MARKET</h3>
+                    <p class="text-sm">Promovemos un estilo de vida consciente, reduciendo el consumo lineal y fomentando la economía circular.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4">Secciones</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-primary-500">Inicio</a></li>
+                        <li><a href="catalogo.html" class="hover:text-primary-500">Catálogo de Productos</a></li>
+                        <li><a href="publicar.html" class="hover:text-primary-500">Publicar un Artículo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4">Contacto</h4>
+                    <p class="text-sm">📍 Av. Sostenibilidad 105, San Isidro</p>
+                    <p class="text-sm mt-1">✉️ contacto@reusemarket.com</p>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs">
+                <p>&copy; 2026 Reuse Market. Todos los derechos reservados. Portal académico de economía circular.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="fixed bottom-8 right-8 z-50 flex flex-col gap-3"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

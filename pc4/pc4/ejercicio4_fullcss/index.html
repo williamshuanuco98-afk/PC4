@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudad Viva - Portal Cultural Municipal</title>
+    <meta name="description" content="Descubre la agenda de eventos, museos, teatros y rutas culturales en Ciudad Viva. El portal cultural oficial de la municipalidad.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span>CIUDAD VIVA</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="agenda.html" class="nav-link">Agenda</a>
+                <a href="detalle.html" class="nav-link">Detalle Evento</a>
+                <a href="lugares.html" class="nav-link">Lugares</a>
+                <a href="galeria.html" class="nav-link">Galería</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+                <a href="agenda.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Ver Eventos</a>
+            </nav>
+
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="nav-mobile-overlay" class="nav-mobile-overlay"></div>
+    <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="agenda.html" class="nav-link">Agenda</a>
+        <a href="detalle.html" class="nav-link">Detalle Evento</a>
+        <a href="lugares.html" class="nav-link">Lugares</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="agenda.html" class="btn btn-primary" style="margin-top: auto;">Ver Eventos</a>
+    </div>
+
+    <main>
+        <section class="home-hero">
+            <div class="container">
+                <div class="home-hero-content animate-fade-in-up">
+                    <span class="badge badge-secondary mb-4">PRÓXIMO GRAN FESTIVAL</span>
+                    <h1>Festival Internacional de Luces y Arte 2026</h1>
+                    <p>La ciudad se llena de color, proyecciones mapping e instalaciones interactivas. Faltan solo:</p>
+                    
+                    <div class="countdown-box">
+                        <div class="countdown-item">
+                            <span id="countdown-days" class="countdown-num">00</span>
+                            <span class="countdown-label">Días</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="countdown-hours" class="countdown-num">00</span>
+                            <span class="countdown-label">Horas</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="countdown-mins" class="countdown-num">00</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="countdown-secs" class="countdown-num">00</span>
+                            <span class="countdown-label">Seg</span>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: var(--spacing-4); flex-wrap: wrap;">
+                        <a href="detalle.html" class="btn btn-primary animate-pulse-glow">Reservar Ficha Gratis</a>
+                        <a href="agenda.html" class="btn btn-outline" style="color: white; border-color: white;">Explorar Agenda</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16" style="background-color: white;">
+            <div class="container text-center">
+                <span class="badge badge-primary mb-4">BENEFICIOS MUNICIPALES</span>
+                <h2 class="mb-8" style="border: none;">Vive la Cultura al Máximo</h2>
+                <div class="categories-grid" style="margin-top: var(--spacing-8);">
+                    <div class="category-card">
+                        <div class="category-icon">🎟️</div>
+                        <h3>Ingreso Preferencial</h3>
+                        <p style="color: var(--color-muted); font-size: var(--text-sm);">Acceso directo sin colas en museos y centros arqueológicos municipales.</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🎓</div>
+                        <h3>Talleres Gratuitos</h3>
+                        <p style="color: var(--color-muted); font-size: var(--text-sm);">Inscripción prioritaria en cursos de pintura, teatro, música y danza.</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🚌</div>
+                        <h3>Rutas Históricas</h3>
+                        <p style="color: var(--color-muted); font-size: var(--text-sm);">Guiados en buses municipales por el centro histórico y zonas de patrimonio.</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🎁</div>
+                        <h3>Puntos Cultura</h3>
+                        <p style="color: var(--color-muted); font-size: var(--text-sm);">Acumula visitas e interacciones para canjear por libros y merchandising.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16" style="background-color: var(--color-light);">
+            <div class="container">
+                <div class="text-center">
+                    <span class="badge badge-secondary mb-4">NUESTRO IMPACTO</span>
+                    <h2 class="mb-4" style="border: none;">Cultura para Todos</h2>
+                    <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Promovemos espacios de encuentro, arte y aprendizaje en cada rincón de nuestra comunidad.</p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">+120</span>
+                        <span class="stat-label">Eventos Anuales</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+45k</span>
+                        <span class="stat-label">Asistentes Felices</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Espacios Culturales</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Gratuito o Accesible</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16" style="background-color: white;">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--spacing-8); flex-wrap: wrap; gap: var(--spacing-4);">
+                    <div>
+                        <span class="badge badge-primary mb-2">LO MÁS VISTO</span>
+                        <h2 class="mb-0" style="border: none;">Agenda Recomendada</h2>
+                    </div>
+                    <a href="agenda.html" class="btn btn-outline">Ver Toda la Agenda &rarr;</a>
+                </div>
+                
+                <div class="categories-grid">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img" src="assets/images/event-bg.jpg" alt="Obra de Teatro">
+                            <span class="badge badge-secondary card-badge">Teatro Municipal</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Hamlet en el Parque</h3>
+                            <p class="card-text">Una adaptación al aire libre del clásico de Shakespeare, integrando proyecciones digitales y música en vivo.</p>
+                            <div class="card-meta">
+                                <span>Sáb 25 Jul, 19:30</span>
+                                <a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img" src="assets/images/hero-bg.jpg" alt="Exposición fotográfica">
+                            <span class="badge badge-primary card-badge">Galería de Arte</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Retratos de Nuestra Tierra</h3>
+                            <p class="card-text">Muestra fotográfica que expone la diversidad cultural, rostros y paisajes rurales de nuestra comunidad.</p>
+                            <div class="card-meta">
+                                <span>Lun - Dom, 09:00 - 18:00</span>
+                                <a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img" src="assets/images/event-bg.jpg" alt="Concierto de música">
+                            <span class="badge badge-success card-badge">Anfiteatro Municipal</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Sinfonía bajo las Estrellas</h3>
+                            <p class="card-text">Gran gala lírica de la Orquesta Filarmónica interpretando clásicos universales y folclore nacional.</p>
+                            <div class="card-meta">
+                                <span>Dom 26 Jul, 18:00</span>
+                                <a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Ver Detalle</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16" style="background-color: var(--color-light);">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <span class="badge badge-primary mb-4">RECORRIDOS URBANOS</span>
+                    <h2 class="mb-4" style="border: none;">Rutas Culturales e Históricas</h2>
+                    <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Planifica tu fin de semana recorriendo los hitos más emblemáticos con nuestros guías certificados.</p>
+                </div>
+                
+                <div class="news-grid">
+                    <div class="card filterable-card">
+                        <div class="card-body">
+                            <span style="font-size: var(--text-3xl);">🏰</span>
+                            <h3 class="card-title mt-4">Ruta del Virreinato</h3>
+                            <p style="color: var(--color-muted); font-size: var(--text-sm); margin-bottom: var(--spacing-4);">Descubre casonas coloniales, balcones históricos y pasadizos que guardan los secretos de la fundación de la ciudad.</p>
+                            <a href="lugares.html" style="font-weight: var(--weight-bold); font-size: var(--text-sm);">Explorar Lugares &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card filterable-card">
+                        <div class="card-body">
+                            <span style="font-size: var(--text-3xl);">🎨</span>
+                            <h3 class="card-title mt-4">Ruta del Arte Urbano</h3>
+                            <p style="color: var(--color-muted); font-size: var(--text-sm); margin-bottom: var(--spacing-4);">Paseo guiado por murales de Street Art de artistas nacionales y extranjeros en los distritos periféricos creativos.</p>
+                            <a href="lugares.html" style="font-weight: var(--weight-bold); font-size: var(--text-sm);">Explorar Lugares &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card filterable-card">
+                        <div class="card-body">
+                            <span style="font-size: var(--text-3xl);">☕</span>
+                            <h3 class="card-title mt-4">Ruta Literaria y de Cafés</h3>
+                            <p style="color: var(--color-muted); font-size: var(--text-sm); margin-bottom: var(--spacing-4);">Sigue los pasos de poetas, novelistas e intelectuales que frecuentaban las tradicionales cafeterías y librerías del centro.</p>
+                            <a href="lugares.html" style="font-weight: var(--weight-bold); font-size: var(--text-sm);">Explorar Lugares &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16" style="background-color: white;">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <span class="badge badge-secondary mb-4">PRENSA CULTURAL</span>
+                    <h2 class="mb-4" style="border: none;">Últimas Novedades y Noticias</h2>
+                </div>
+                
+                <div class="news-grid">
+                    <div class="card news-card-featured">
+                        <div class="card-img-wrapper">
+                            <img class="card-img" src="assets/images/hero-bg.jpg" alt="Teatro restaurado">
+                            <span class="badge badge-secondary card-badge">PATRIMONIO</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Restauración Histórica: Reapertura del Teatro Municipal</h3>
+                            <p class="card-text">Tras 18 meses de riguroso trabajo de restauración estructural y ornamental, el icónico Teatro Municipal vuelve a abrir sus puertas al público general. La gala inaugural contará con la presentación de óperas clásicas gratuitas y espectáculos de luces mapping en la fachada principal.</p>
+                            <div class="card-meta">
+                                <span>Publicado: 12 Jul 2026</span>
+                                <a href="contacto.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Leer Nota Completa</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="badge badge-primary mb-2">EDUCATIVO</span>
+                            <h3 class="card-title">Convocatoria: Talleres de Invierno 2026</h3>
+                            <p class="card-text" style="font-size: var(--text-sm); color: var(--color-muted);">Se abren las inscripciones para más de 45 talleres gratuitos en música, robótica creativa, pintura y danzas tradicionales.</p>
+                            <div class="card-meta" style="margin-top: var(--spacing-4);">
+                                <span>Publicado: 10 Jul 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <span class="badge badge-success mb-2">CONCURSO</span>
+                            <h3 class="card-title">Premio Joven Creador de Arte Contemporáneo</h3>
+                            <p class="card-text" style="font-size: var(--text-sm); color: var(--color-muted);">Invitación a artistas menores de 35 años para presentar sus propuestas de escultura, fotografía e instalación visual.</p>
+                            <div class="card-meta" style="margin-top: var(--spacing-4);">
+                                <span>Publicado: 08 Jul 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12" style="background-color: var(--color-light); border-top: 1px solid var(--color-border);">
+            <div class="container text-center">
+                <p style="font-size: var(--text-xs); text-transform: uppercase; color: var(--color-muted); letter-spacing: 0.1em; margin-bottom: var(--spacing-6);">Agradecemos a nuestros patrocinadores y aliados culturales</p>
+                <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: var(--spacing-8); opacity: 0.6; filter: grayscale(100%);">
+                    <span style="font-family: var(--font-heading); font-weight: var(--weight-bold); font-size: var(--text-xl);">MINISTERIO DE CULTURA</span>
+                    <span style="font-family: var(--font-heading); font-weight: var(--weight-bold); font-size: var(--text-xl);">ASOCIACIÓN DE ARTE</span>
+                    <span style="font-family: var(--font-heading); font-weight: var(--weight-bold); font-size: var(--text-xl);">TELECOM CO.</span>
+                    <span style="font-family: var(--font-heading); font-weight: var(--weight-bold); font-size: var(--text-xl);">BANCO NACIONAL</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CIUDAD VIVA<span class="logo-dot">.</span></h3>
+                    <p>Portal Oficial del Programa de Promoción Cultural y Artística Municipal. Transformamos la ciudad a través del arte.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">TW</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="agenda.html">Agenda de Eventos</a></li>
+                        <li><a href="detalle.html">Detalle de Evento</a></li>
+                        <li><a href="lugares.html">Lugares Culturales</a></li>
+                        <li><a href="galeria.html">Galería de Recorridos</a></li>
+                        <li><a href="contacto.html">Contacto y Convocatorias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programas</h4>
+                    <ul>
+                        <li><a href="#">Talleres Municipales</a></li>
+                        <li><a href="#">Buses Históricos</a></li>
+                        <li><a href="#">Red de Bibliotecas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. de la Cultura 450, Centro Cívico</p>
+                    <p>📞 (01) 456-7890</p>
+                    <p>✉️ cultura@municipalidad.gob.pe</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ciudad Viva. Todos los derechos reservados. Portal diseñado para fines de evaluación académica.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

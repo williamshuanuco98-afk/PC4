@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamlet en el Parque - Detalle de Evento - Ciudad Viva</title>
+    <meta name="description" content="Detalles, horarios y fichas descargables para Hamlet en el Parque. Gran evento cultural municipal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span>CIUDAD VIVA</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="agenda.html" class="nav-link">Agenda</a>
+                <a href="detalle.html" class="nav-link active">Detalle Evento</a>
+                <a href="lugares.html" class="nav-link">Lugares</a>
+                <a href="galeria.html" class="nav-link">Galería</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+                <a href="agenda.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Ver Eventos</a>
+            </nav>
+
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="nav-mobile-overlay" class="nav-mobile-overlay"></div>
+    <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="agenda.html" class="nav-link">Agenda</a>
+        <a href="detalle.html" class="nav-link active">Detalle Evento</a>
+        <a href="lugares.html" class="nav-link">Lugares</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="agenda.html" class="btn btn-primary" style="margin-top: auto;">Ver Eventos</a>
+    </div>
+
+    <main>
+        <section class="detail-hero">
+            <div class="container">
+                <div class="detail-hero-content">
+                    <span class="badge badge-secondary mb-2">OBRA DE TEATRO ESTRENO</span>
+                    <h1>Hamlet en el Parque del Anfiteatro</h1>
+                    <div class="detail-meta-list">
+                        <div class="detail-meta-item">
+                            <span>📅 Sábado, 25 de Julio de 2026</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span>⏰ 19:30 - 22:00</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span>📍 Parque del Anfiteatro Central</span>
+                        </div>
+                        <div class="detail-meta-item">
+                            <span>🎟️ Ingreso Libre (Aforo limitado)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12">
+            <div class="container event-info-grid">
+                <article class="event-main-content">
+                    <h2 class="mb-4">Acerca de la Obra</h2>
+                    <p class="mb-4">Disfruta de una adaptación teatral contemporánea única al aire libre de **Hamlet**, la obra maestra dramática de William Shakespeare. En esta producción, el grupo actoral municipal incorpora **mapping digital 3D** proyectado sobre árboles y estructuras históricas del parque, creando una escenografía viva de luces y sombras acompañada por una banda sonora orquestal interpretada totalmente en vivo.</p>
+                    
+                    <p class="mb-6">El evento está diseñado para toda la familia y busca recuperar el valor de los espacios públicos municipales como puntos de congregación artística y pacífica.</p>
+
+                    <h3 class="mb-4">Programación y Cronograma de la Tarde</h3>
+                    <ul class="mb-8" style="padding-left: var(--spacing-4); list-style: disc;">
+                        <li class="mb-2"><strong>18:30:</strong> Apertura de puertas y accesos peatonales al Anfiteatro.</li>
+                        <li class="mb-2"><strong>19:00:</strong> Performance musical introductoria y proyección experimental de mapping de bienvenida.</li>
+                        <li class="mb-2"><strong>19:30:</strong> Inicio oficial de la puesta en escena (Actos I al III).</li>
+                        <li class="mb-2"><strong>20:45:</strong> Breve intermedio de 15 minutos (Muestra de arte lumínico).</li>
+                        <li class="mb-2"><strong>21:00:</strong> Desenlace teatral (Actos IV y V) y cierre musical.</li>
+                    </ul>
+
+                    <h3 class="mb-4">Organizadores y Elenco</h3>
+                    <p style="color: var(--color-muted); font-size: var(--text-sm);">Organizado por la **Subgerencia de Educación y Cultura de la Municipalidad** en conjunto con la Compañía Nacional de Teatro Urbano y el patrocinio del Patronato de Arte Joven.</p>
+                </article>
+
+                <aside class="event-sidebar">
+                    <div class="event-sidebar-box">
+                        <h3 style="font-size: var(--text-lg); margin-bottom: var(--spacing-4);">Ficha de Inscripción</h3>
+                        <p style="font-size: var(--text-sm); color: var(--color-muted); margin-bottom: var(--spacing-4);">Aunque el ingreso es libre, recomendamos registrarte para recibir tu código de acceso QR y asegurar asiento preferencial.</p>
+                        
+                        <a href="contacto.html" class="btn btn-primary mb-4" style="width: 100%;">Inscribirme en Línea</a>
+                        
+                        <button id="print-btn" class="btn btn-outline" style="width: 100%;" onclick="window.print()">
+                            🖨️ Imprimir Ficha del Evento
+                        </button>
+                    </div>
+
+                    <div class="event-sidebar-box">
+                        <h3 style="font-size: var(--text-lg); margin-bottom: var(--spacing-4);">Ubicación Exacta</h3>
+                        <div class="map-container mb-4">
+                            <div style="background-color: var(--color-border); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: var(--text-sm); text-align: center; padding: var(--spacing-4);">
+                                📍 <strong>Parque del Anfiteatro</strong><br>Av. Principal y Cruce Calle Las Flores (Cerca a Estación Central)
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="py-12" style="background-color: var(--color-light); border-top: 1px solid var(--color-border);">
+            <div class="container related-events">
+                <h2 class="mb-8" style="border: none;">Eventos que te podrían interesar</h2>
+                <div class="categories-grid">
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img" src="assets/images/event-bg.jpg" alt="Concierto de música">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" style="font-size: var(--text-base);">Sinfonía bajo las Estrellas</h3>
+                            <p class="card-text" style="font-size: var(--text-xs);">Gala musical lírica y folclor nacional en vivo.</p>
+                            <div class="card-meta">
+                                <span>Dom 26 Jul, 18:00</span>
+                                <a href="detalle.html" style="font-weight: var(--weight-bold); font-size: var(--text-xs);">Ver &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img" src="assets/images/hero-bg.jpg" alt="Paseo de noche">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" style="font-size: var(--text-base);">Recorrido Nocturno de Mitos</h3>
+                            <p class="card-text" style="font-size: var(--text-xs);">Visitas guiadas de leyendas en cementerio histórico.</p>
+                            <div class="card-meta">
+                                <span>Jue 23 Jul, 20:00</span>
+                                <a href="detalle.html" style="font-weight: var(--weight-bold); font-size: var(--text-xs);">Ver &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-img-wrapper">
+                            <img class="card-img" src="assets/images/event-bg.jpg" alt="Taller">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title" style="font-size: var(--text-base);">Taller: Actuación y Expresión</h3>
+                            <p class="card-text" style="font-size: var(--text-xs);">Curso corto presencial introductorio para jóvenes.</p>
+                            <div class="card-meta">
+                                <span>Lun 27 Jul, 15:00</span>
+                                <a href="detalle.html" style="font-weight: var(--weight-bold); font-size: var(--text-xs);">Ver &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CIUDAD VIVA<span class="logo-dot">.</span></h3>
+                    <p>Portal Oficial del Programa de Promoción Cultural y Artística Municipal. Transformamos la ciudad a través del arte.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="agenda.html">Agenda de Eventos</a></li>
+                        <li><a href="detalle.html">Detalle de Evento</a></li>
+                        <li><a href="lugares.html">Lugares Culturales</a></li>
+                        <li><a href="galeria.html">Galería de Recorridos</a></li>
+                        <li><a href="contacto.html">Contacto y Convocatorias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Programas</h4>
+                    <ul>
+                        <li><a href="#">Talleres Municipales</a></li>
+                        <li><a href="#">Buses Históricos</a></li>
+                        <li><a href="#">Red de Bibliotecas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. de la Cultura 450, Centro Cívico</p>
+                    <p>📞 (01) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ciudad Viva. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

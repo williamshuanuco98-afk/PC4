@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Reuse Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                        },
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light text-slate-700 font-sans min-h-screen flex flex-col">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-dark">
+                🌱 <span class="text-primary-600">REUSE</span>MARKET
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="text-slate-600 hover:text-primary-600 font-medium">Inicio</a>
+                <a href="catalogo.html" class="text-primary-600 font-semibold">Catálogo</a>
+                <a href="detalle.html" class="text-slate-600 hover:text-primary-600 font-medium">Detalle Producto</a>
+                <a href="perfil.html" class="text-slate-600 hover:text-primary-600 font-medium">Vendedor</a>
+                <a href="carrito.html" class="text-slate-600 hover:text-primary-600 font-medium">Carrito</a>
+                <a href="publicar.html" class="text-slate-600 hover:text-primary-600 font-medium">Publicar</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="carrito.html" class="relative p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors">
+                    🛒
+                    <span class="absolute -top-1 -right-1 bg-primary-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-6 items-center justify-between mb-8">
+                <h1 class="text-3xl font-bold text-dark font-heading">Catálogo de Productos</h1>
+                <button id="mobile-filter-btn" class="md:hidden btn-outline w-full py-2.5">🔍 Mostrar Filtros</button>
+            </div>
+
+            <!-- Buscador Superior -->
+            <div class="mb-8 bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-4">
+                <input class="flex-grow border border-slate-200 rounded-lg px-4 py-2.5 outline-none focus:border-primary-500" type="text" placeholder="¿Qué estás buscando hoy?">
+                <select class="border border-slate-200 rounded-lg px-4 py-2.5 outline-none focus:border-primary-500">
+                    <option value="recent">Recientes primero</option>
+                    <option value="price-asc">Precio: de menor a mayor</option>
+                    <option value="price-desc">Precio: de mayor a menor</option>
+                </select>
+            </div>
+
+            <div class="flex gap-8 relative">
+                <!-- Sidebar de Filtros (Drawer Móvil / Fijo Escritorio) -->
+                <div id="sidebar-overlay" class="hidden fixed inset-0 bg-dark/40 backdrop-blur-sm z-40 md:hidden"></div>
+                <aside id="sidebar-filter" class="fixed md:static top-0 left-0 h-screen md:h-auto w-64 bg-white md:bg-transparent p-6 md:p-0 z-50 md:z-auto border-r border-slate-200 md:border-none shadow-xl md:shadow-none -translate-x-full md:translate-x-0 transition-transform duration-300 flex flex-col gap-6">
+                    <div class="flex justify-between items-center md:hidden border-b border-slate-100 pb-4 mb-2">
+                        <h2 class="font-bold text-lg text-dark">Filtros</h2>
+                        <button id="close-filter-btn" class="text-slate-400 hover:text-dark text-xl">&times;</button>
+                    </div>
+
+                    <div class="bg-white md:p-6 md:border md:border-slate-200 md:rounded-xl md:shadow-sm flex flex-col gap-6">
+                        <div>
+                            <h3 class="font-bold text-dark mb-3">Categoría</h3>
+                            <div class="flex flex-col gap-2">
+                                <label class="flex items-center gap-2"><input type="checkbox" checked class="accent-primary-500"> Tecnología</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary-500"> Moda & Ropa</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary-500"> Libros & Ocio</label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="font-bold text-dark mb-3">Estado del Producto</h3>
+                            <div class="flex flex-col gap-2">
+                                <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary-500"> Como Nuevo</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary-500"> Reacondicionado</label>
+                                <label class="flex items-center gap-2"><input type="checkbox" class="accent-primary-500"> Usado</label>
+                            </div>
+                        </div>
+
+                        <button class="btn-primary w-full py-2.5 text-sm" onclick="window.showTailwindToast('Filtros aplicados')">Aplicar Filtros</button>
+                    </div>
+                </aside>
+
+                <!-- Grid de Productos (1, 2, 3, o 4 columnas) -->
+                <section class="flex-grow">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Producto 1 -->
+                        <article class="custom-card flex flex-col">
+                            <div class="relative overflow-hidden aspect-video">
+                                <img src="assets/images/hero-bg.jpg" class="w-full h-full object-cover" alt="Laptop">
+                                <span class="absolute top-2 left-2 bg-emerald-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">Reacondicionado</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h3 class="font-bold text-base text-dark mb-1">MacBook Pro M1</h3>
+                                <p class="text-xs text-slate-500 mb-4 flex-grow">Batería 94%, cargador original y caja completa.</p>
+                                <div class="flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+                                    <span class="font-bold text-dark">S/. 2,800.00</span>
+                                    <a href="detalle.html" class="btn-primary py-1.5 px-3 text-xs">Detalles</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Producto 2 -->
+                        <article class="custom-card flex flex-col">
+                            <div class="relative overflow-hidden aspect-video">
+                                <img src="assets/images/event-bg.jpg" class="w-full h-full object-cover" alt="Bicicleta">
+                                <span class="absolute top-2 left-2 bg-emerald-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">Como Nuevo</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h3 class="font-bold text-base text-dark mb-1">Bicicleta Trek 3500</h3>
+                                <p class="text-xs text-slate-500 mb-4 flex-grow">Poco uso, mantenimiento y llantas en excelente estado.</p>
+                                <div class="flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+                                    <span class="font-bold text-dark">S/. 950.00</span>
+                                    <a href="detalle.html" class="btn-primary py-1.5 px-3 text-xs">Detalles</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Producto 3 -->
+                        <article class="custom-card flex flex-col">
+                            <div class="relative overflow-hidden aspect-video">
+                                <img src="assets/images/hero-bg.jpg" class="w-full h-full object-cover" alt="Libro">
+                                <span class="absolute top-2 left-2 bg-amber-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full">Usado Bueno</span>
+                            </div>
+                            <div class="p-5 flex flex-col flex-grow">
+                                <h3 class="font-bold text-base text-dark mb-1">Enciclopedia de Ciencias</h3>
+                                <p class="text-xs text-slate-500 mb-4 flex-grow">12 Tomos con ilustraciones. Tapa dura bien conservada.</p>
+                                <div class="flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+                                    <span class="font-bold text-dark">S/. 180.00</span>
+                                    <a href="detalle.html" class="btn-primary py-1.5 px-3 text-xs">Detalles</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Paginación -->
+                    <div class="flex justify-center items-center gap-2 mt-12">
+                        <button class="px-4 py-2 border rounded-lg bg-white hover:bg-slate-50 text-sm">Anterior</button>
+                        <button class="px-4 py-2 border rounded-lg bg-primary-50 text-primary-600 font-bold text-sm">1</button>
+                        <button class="px-4 py-2 border rounded-lg bg-white hover:bg-slate-50 text-sm">2</button>
+                        <button class="px-4 py-2 border rounded-lg bg-white hover:bg-slate-50 text-sm">Siguiente</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-slate-400 py-8 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs">
+            <p>&copy; 2026 Reuse Market. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="fixed bottom-8 right-8 z-50 flex flex-col gap-3"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

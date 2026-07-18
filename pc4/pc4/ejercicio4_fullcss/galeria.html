@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte y Recorridos - Ciudad Viva</title>
+    <meta name="description" content="Explora los mosaicos artísticos y registros fotográficos de los festivales en Ciudad Viva.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span>CIUDAD VIVA</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="agenda.html" class="nav-link">Agenda</a>
+                <a href="detalle.html" class="nav-link">Detalle Evento</a>
+                <a href="lugares.html" class="nav-link">Lugares</a>
+                <a href="galeria.html" class="nav-link active">Galería</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+                <a href="agenda.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Ver Eventos</a>
+            </nav>
+
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="nav-mobile-overlay" class="nav-mobile-overlay"></div>
+    <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="agenda.html" class="nav-link">Agenda</a>
+        <a href="detalle.html" class="nav-link">Detalle Evento</a>
+        <a href="lugares.html" class="nav-link">Lugares</a>
+        <a href="galeria.html" class="nav-link active">Galería</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="agenda.html" class="btn btn-primary" style="margin-top: auto;">Ver Eventos</a>
+    </div>
+
+    <main class="py-12">
+        <div class="container">
+            <div class="text-center mb-12">
+                <span class="badge badge-secondary mb-2">MOSAICO ARTÍSTICO</span>
+                <h1 class="mb-4">Galería de Momentos y Espacios</h1>
+                <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Pasa el cursor sobre cada imagen para descubrir la descripción e historia detrás de cada actividad y monumento cultural de nuestra comuna.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item col-span-2 row-span-2" onclick="window.showToast('Visualizando: Festival de Luces mapping en fachada principal', 'info')">
+                    <img src="assets/images/hero-bg.jpg" alt="Festival de Luces mapping">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Instalación Mapping</h3>
+                        <p class="gallery-desc">Muestra digital tridimensional interactiva proyectada en el Palacio Municipal por el Aniversario Cultural.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="window.showToast('Visualizando: Ensayo general en la Escuela de Danzas', 'info')">
+                    <img src="assets/images/event-bg.jpg" alt="Ensayo Escuela de Danzas">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Ensayo de Ballet</h3>
+                        <p class="gallery-desc">Jóvenes del elenco municipal de danza clásica en plenas prácticas previas a la gala anual.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="window.showToast('Visualizando: Archivo histórico de la biblioteca central', 'info')">
+                    <img src="assets/images/hero-bg.jpg" alt="Biblioteca Municipal">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Biblioteca Central</h3>
+                        <p class="gallery-desc">Conservación de pergaminos del siglo XVII y obras autografiadas de intelectuales de la ciudad.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item row-span-2" onclick="window.showToast('Visualizando: Pintura mural urbana de concientización social', 'info')">
+                    <img src="assets/images/event-bg.jpg" alt="Mural Urbano">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Muralismo Urbano</h3>
+                        <p class="gallery-desc">Muestra artística al aire libre realizada por jóvenes voluntarios en los muros laterales del anfiteatro.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="window.showToast('Visualizando: Concierto lírico de coros infantiles', 'info')">
+                    <img src="assets/images/event-bg.jpg" alt="Coro Infantil">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Canto Coral Infantil</h3>
+                        <p class="gallery-desc">Presentación navideña municipal en el atrio del Templo Central.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item col-span-2" onclick="window.showToast('Visualizando: Ruta fotográfica turística de casonas', 'info')">
+                    <img src="assets/images/hero-bg.jpg" alt="Fotografía histórica">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Ruta Histórica Guiada</h3>
+                        <p class="gallery-desc">Buses de turismo municipal trasladando vecinos a través del recorrido de casonas y balcones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CIUDAD VIVA<span class="logo-dot">.</span></h3>
+                    <p>Portal Oficial del Programa de Promoción Cultural y Artística Municipal. Transformamos la ciudad a través del arte.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="agenda.html">Agenda de Eventos</a></li>
+                        <li><a href="detalle.html">Detalle de Evento</a></li>
+                        <li><a href="lugares.html">Lugares Culturales</a></li>
+                        <li><a href="galeria.html">Galería de Recorridos</a></li>
+                        <li><a href="contacto.html">Contacto y Convocatorias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. de la Cultura 450, Centro Cívico</p>
+                    <p>📞 (01) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ciudad Viva. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

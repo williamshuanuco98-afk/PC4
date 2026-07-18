@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Producto - Reuse Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#10b981',
+                            600: '#059669',
+                        },
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light text-slate-700 font-sans min-h-screen flex flex-col">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-dark">
+                🌱 <span class="text-primary-600">REUSE</span>MARKET
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="text-slate-600 hover:text-primary-600 font-medium">Inicio</a>
+                <a href="catalogo.html" class="text-slate-600 hover:text-primary-600 font-medium">Catálogo</a>
+                <a href="detalle.html" class="text-slate-600 hover:text-primary-600 font-medium">Detalle Producto</a>
+                <a href="perfil.html" class="text-slate-600 hover:text-primary-600 font-medium">Vendedor</a>
+                <a href="carrito.html" class="text-slate-600 hover:text-primary-600 font-medium">Carrito</a>
+                <a href="publicar.html" class="text-primary-600 font-semibold">Publicar</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="carrito.html" class="relative p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors">
+                    🛒
+                    <span class="absolute -top-1 -right-1 bg-primary-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-dark font-heading mb-8">Publicar un Artículo Sostenible</h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Formulario de Publicación -->
+                <section class="lg:col-span-2">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                        <form data-ajax-fake="true" data-success-msg="¡Excelente! Tu artículo ha sido publicado para la venta.">
+                            
+                            <div class="mb-4">
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Título del Anuncio</label>
+                                <input class="w-full border border-slate-200 rounded-lg px-4 py-2.5 outline-none focus:border-primary-500" type="text" placeholder="Ej. Bicicleta de montaña Trek 3500" required>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Precio de Venta (S/.)</label>
+                                    <input class="w-full border border-slate-200 rounded-lg px-4 py-2.5 outline-none focus:border-primary-500" type="number" placeholder="Ej. 950" required min="1">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2">Estado del Artículo</label>
+                                    <select class="w-full border border-slate-200 rounded-lg px-4 py-2.5 outline-none focus:border-primary-500" required>
+                                        <option value="">Selecciona el estado...</option>
+                                        <option value="nuevo">Como Nuevo</option>
+                                        <option value="reacondicionado">Reacondicionado</option>
+                                        <option value="bueno">Usado en buen estado</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Descripción del Producto</label>
+                                <textarea class="w-full border border-slate-200 rounded-lg px-4 py-2.5 outline-none focus:border-primary-500" rows="5" placeholder="Cuéntale a los compradores los detalles, especificaciones, desperfectos, motivo de venta..." required></textarea>
+                            </div>
+
+                            <!-- Carga visual de imágenes -->
+                            <div class="mb-6">
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Fotografías del Producto</label>
+                                <div class="border-2 border-dashed border-slate-200 hover:border-primary-500 rounded-xl p-8 text-center cursor-pointer transition-colors" onclick="window.showTailwindToast('Explorador de archivos simulado abierto')">
+                                    <span class="text-4xl block mb-2">📷</span>
+                                    <span class="text-sm font-semibold text-slate-600 block">Sube tus fotos aquí</span>
+                                    <span class="text-xs text-slate-400">Formatos recomendados: JPG, PNG. Máx. 5MB por foto.</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full py-3.5 text-base">
+                                Publicar Artículo Ahora
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- FAQs Columna Derecha -->
+                <aside class="lg:col-span-1 flex flex-col gap-6">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-lg text-dark mb-4 font-heading">Preguntas Frecuentes</h3>
+                        
+                        <div class="flex flex-col gap-4 text-sm text-slate-600">
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">¿Qué es el Eco-Ahorro / Ahorro CO2?</h4>
+                                <p>Cada artículo de segunda mano comprado evita la producción de uno nuevo, ahorrando emisiones de CO2 asociadas a la manufactura y logística.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-1">¿Cómo se realiza el envío?</h4>
+                                <p>El envío es coordinado directamente entre el comprador y el vendedor, o a través de nuestros puntos de entrega oficiales Reuse.</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs">
+            <p>&copy; 2026 Reuse Market. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="fixed bottom-8 right-8 z-50 flex flex-col gap-3"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

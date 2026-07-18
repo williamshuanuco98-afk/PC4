@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud 360 - Red de Centros de Salud</title>
+    <!-- Materialize CSS & Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- Preloader wrapper -->
+    <div id="preloader-wrapper" class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left"><div class="circle"></div></div>
+                <div class="gap-patch"><div class="circle"></div></div>
+                <div class="circle-clipper right"><div class="circle"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container nav-wrapper">
+                <a href="index.html" class="brand-logo">🩺 SALUD 360</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger" style="color: #0284c7;"><span style="font-size:24px;">☰</span></a>
+                
+                <ul class="right hide-on-med-and-down">
+                    <li class="active"><a href="index.html">Inicio</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="directorio.html">Médicos</a></li>
+                    <li><a href="reserva.html">Reservar Cita</a></li>
+                    <li><a href="citas.html">Mis Citas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="reserva.html" class="btn waves-effect waves-light white-text">Reserva Rápida</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Sidenav Móvil -->
+    <ul class="sidenav" id="mobile-nav">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="directorio.html">Médicos</a></li>
+        <li><a href="reserva.html">Reservar Cita</a></li>
+        <li><a href="citas.html">Mis Citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="reserva.html" class="btn waves-effect waves-light white-text" style="margin: 20px;">Reserva Rápida</a></li>
+    </ul>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section light-blue lighten-5 py-5" style="padding: 60px 0; background: linear-gradient(135deg, rgba(240, 249, 255, 0.9), rgba(2, 132, 199, 0.1)), url('assets/images/hero-bg.jpg') center/cover no-repeat;">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8">
+                        <span class="badge blue white-text left" style="float: none; margin-left: 0; margin-bottom: 20px; font-weight: bold; border-radius: 4px;">Atención Médica Digital</span>
+                        <h1 class="font-heading fw-bold" style="font-size: 3rem; color: #0f172a; margin-top: 10px;">Tu Salud, Nuestra Prioridad 360°</h1>
+                        <p class="flow-text text-dark" style="font-size: 1.2rem; margin-bottom: 30px;">Reserva citas presenciales y virtuales con los mejores especialistas de la red médica más completa.</p>
+                        
+                        <div style="display:flex; gap: 15px; flex-wrap: wrap;">
+                            <a href="reserva.html" class="btn btn-large waves-effect waves-light">Agendar Cita en Línea</a>
+                            <a href="directorio.html" class="btn btn-large btn-flat waves-effect border" style="border: 1px solid #0284c7; background: white !important;">Ver Médicos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios / Especialidades destacados -->
+        <section class="section py-5">
+            <div class="container">
+                <div class="center-align mb-5" style="margin-bottom: 50px;">
+                    <h2 class="font-heading">Nuestros Servicios Principales</h2>
+                    <p class="text-muted">Brindamos una gama integral de especialidades clínicas para el cuidado familiar.</p>
+                </div>
+
+                <div class="row">
+                    <!-- Servicio 1 -->
+                    <div class="col s12 m4">
+                        <div class="card p-3">
+                            <div class="card-content">
+                                <span class="card-title">🩺 Medicina General</span>
+                                <p class="text-muted">Chequeos periódicos, diagnóstico inicial y derivación experta de patologías complejas.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="reserva.html" class="light-blue-text font-bold">Agendar &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Servicio 2 -->
+                    <div class="col s12 m4">
+                        <div class="card p-3">
+                            <div class="card-content">
+                                <span class="card-title">👶 Pediatría</span>
+                                <p class="text-muted">Cuidado integral del desarrollo, vacunación y atención médica para tus hijos desde neonatos.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="reserva.html" class="light-blue-text font-bold">Agendar &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Servicio 3 -->
+                    <div class="col s12 m4">
+                        <div class="card p-3">
+                            <div class="card-content">
+                                <span class="card-title">🧠 Psicología</span>
+                                <p class="text-muted">Orientación psicológica, terapia cognitivo conductual y soporte emocional virtual o presencial.</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="reserva.html" class="light-blue-text font-bold">Agendar &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text font-heading font-bold">🩺 Red Salud 360</h5>
+                    <p class="grey-text text-lighten-4">Atención de alta fidelidad, profesionales comprometidos e infraestructura de calidad al alcance de todos.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Navegación</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="index.html">Inicio</a></li>
+                        <li><a class="grey-text text-lighten-3" href="especialidades.html">Especialidades</a></li>
+                        <li><a class="grey-text text-lighten-3" href="directorio.html">Directorio Médico</a></li>
+                        <li><a class="grey-text text-lighten-3" href="reserva.html">Reserva de Citas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright grey darken-5">
+            <div class="container center-align">
+                &copy; 2026 Salud 360. Todos los derechos reservados. Evaluación final académica.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize JS + custom main -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

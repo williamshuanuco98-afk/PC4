@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Vendedor - Carlos M. - Reuse Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#10b981',
+                            600: '#059669',
+                        },
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light text-slate-700 font-sans min-h-screen flex flex-col">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-bold text-dark">
+                🌱 <span class="text-primary-600">REUSE</span>MARKET
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="text-slate-600 hover:text-primary-600 font-medium">Inicio</a>
+                <a href="catalogo.html" class="text-slate-600 hover:text-primary-600 font-medium">Catálogo</a>
+                <a href="detalle.html" class="text-slate-600 hover:text-primary-600 font-medium">Detalle Producto</a>
+                <a href="perfil.html" class="text-primary-600 font-semibold">Vendedor</a>
+                <a href="carrito.html" class="text-slate-600 hover:text-primary-600 font-medium">Carrito</a>
+                <a href="publicar.html" class="text-slate-600 hover:text-primary-600 font-medium">Publicar</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="carrito.html" class="relative p-2 bg-slate-100 hover:bg-slate-200 rounded-full transition-colors">
+                    🛒
+                    <span class="absolute -top-1 -right-1 bg-primary-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Columna Izquierda: Perfil Card e Info -->
+                <aside class="lg:col-span-1">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm text-center">
+                        <div class="w-24 h-24 bg-primary-100 text-primary-700 text-3xl font-extrabold rounded-full flex items-center justify-center mx-auto mb-4">
+                            CM
+                        </div>
+                        <h2 class="text-xl font-bold text-dark font-heading">Carlos Mendoza</h2>
+                        <p class="text-sm text-slate-400">Miembro desde: Feb 2024</p>
+                        
+                        <div class="flex justify-center items-center gap-1 my-3 text-amber-500 font-bold">
+                            ⭐⭐⭐⭐⭐ <span class="text-dark ms-1">4.9</span> <span class="text-slate-400 text-xs font-normal">(28 valoraciones)</span>
+                        </div>
+
+                        <div class="border-t border-slate-100 pt-4 mt-4 grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <span class="block text-2xl font-bold text-dark">18</span>
+                                <span class="text-xs text-slate-400">Ventas Exitosas</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-emerald-500">92 kg</span>
+                                <span class="text-xs text-slate-400">CO2 Ahorrado</span>
+                            </div>
+                        </div>
+
+                        <button class="btn-primary w-full py-2.5 text-sm mt-6" onclick="window.showTailwindToast('Mensaje directo iniciado (simulado)')">
+                            💬 Enviar Mensaje
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Columna Derecha: Estadísticas y Catálogo Vendedor -->
+                <section class="lg:col-span-2 flex flex-col gap-8">
+                    
+                    <!-- Estadísticas del Vendedor -->
+                    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                        <h3 class="font-bold text-lg text-dark mb-4 font-heading">Reputación y Estadísticas</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div class="p-4 bg-slate-50 border border-slate-150 rounded-xl">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Tasa de Respuesta</span>
+                                <span class="text-xl font-bold text-dark">98%</span>
+                            </div>
+                            <div class="p-4 bg-slate-50 border border-slate-150 rounded-xl">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Tiempo de Respuesta</span>
+                                <span class="text-xl font-bold text-dark">&lt; 30 min</span>
+                            </div>
+                            <div class="p-4 bg-slate-50 border border-slate-150 rounded-xl">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Verificación</span>
+                                <span class="text-xl font-bold text-emerald-500">ID Aprobado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Productos Publicados por él -->
+                    <div>
+                        <h3 class="font-bold text-xl text-dark mb-6 font-heading">Artículos Activos en Venta</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <article class="custom-card flex flex-col bg-white">
+                                <div class="relative overflow-hidden aspect-video">
+                                    <img src="assets/images/hero-bg.jpg" class="w-full h-full object-cover" alt="MacBook">
+                                </div>
+                                <div class="p-5 flex flex-col flex-grow">
+                                    <h4 class="font-bold text-base text-dark mb-1">MacBook Pro M1 2020</h4>
+                                    <p class="text-xs text-slate-500 mb-4 flex-grow">8GB RAM / 256GB SSD. Impecable.</p>
+                                    <div class="flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+                                        <span class="font-bold text-dark">S/. 2,800.00</span>
+                                        <a href="detalle.html" class="btn-primary py-1.5 px-3 text-xs">Detalles</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="custom-card flex flex-col bg-white">
+                                <div class="relative overflow-hidden aspect-video">
+                                    <img src="assets/images/event-bg.jpg" class="w-full h-full object-cover" alt="Mouse">
+                                </div>
+                                <div class="p-5 flex flex-col flex-grow">
+                                    <h4 class="font-bold text-base text-dark mb-1">Apple Magic Mouse 2</h4>
+                                    <p class="text-xs text-slate-500 mb-4 flex-grow">Caja completa y cable Lightning.</p>
+                                    <div class="flex items-center justify-between border-t border-slate-100 pt-3 mt-auto">
+                                        <span class="font-bold text-dark">S/. 220.00</span>
+                                        <a href="detalle.html" class="btn-primary py-1.5 px-3 text-xs">Detalles</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-slate-400 py-8 mt-auto border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs">
+            <p>&copy; 2026 Reuse Market. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="fixed bottom-8 right-8 z-50 flex flex-col gap-3"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

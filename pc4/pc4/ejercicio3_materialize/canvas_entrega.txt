@@ -1,0 +1,23 @@
+=========================================
+FORMATO DE ENTREGA EN CANVAS - COPIAR Y COMPLETAR
+=========================================
+
+Grupo: Grupo 5 - Sección Hojas de Estilo en Cascada Avanzado (100000SI58)
+Integrantes:
+1. [Nombre del Integrante 1] ([Código UTP])
+2. [Nombre del Integrante 2] ([Código UTP])
+3. [Nombre del Integrante 3] ([Código UTP])
+4. [Nombre del Integrante 4] ([Código UTP])
+5. [Nombre del Integrante 5] ([Código UTP])
+
+Ejercicio asignado: Ejercicio 3 · MATERIALIZE (Plataforma web para una red de centros de salud)
+Nombre del proyecto: Salud 360
+
+Link de grabación: [INSERTAR ENLACE DE GRABACIÓN DE EXPOSICIÓN AQUÍ]
+Link de GitHub o nombre del archivo ZIP: pc4_grupo5_salud_360.zip
+
+Navegadores probados: Google Chrome, Mozilla Firefox, Microsoft Edge
+
+=========================================
+NOTA: Completa con tus datos de estudiante al subir a la plataforma Canvas.
+=========================================

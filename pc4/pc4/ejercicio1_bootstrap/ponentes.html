@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponentes - Technova Summit 2026</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="index.html">
+                🚀 TECHNOVA <span class="text-info ms-1">2026</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <h5 class="offcanvas-title text-white fw-bold">TECHNOVA 2026</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-lg-3 align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="agenda.html">Agenda</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ponentes.html">Ponentes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="entradas.html">Entradas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="inscripcion.html">Inscripción</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a href="entradas.html" class="btn btn-secondary text-dark py-2 px-3 fw-bold">Comprar Ticket</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-2">LÍDERES DE OPINIÓN</span>
+                <h1 class="fw-bold">Nuestros Expositores</h1>
+                <p class="text-muted max-width-600 mx-auto">Expertos, investigadores y emprendedores líderes a nivel mundial que compartirán sus visiones tecnológicas.</p>
+            </div>
+
+            <!-- Catálogo con Filtros Visuales -->
+            <div class="row g-4">
+                
+                <!-- Ponente 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card card h-100">
+                        <img src="assets/images/event-bg.jpg" class="card-img-top" alt="Dra. Arantza Gomez" style="height: 220px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge bg-info text-dark mb-2 text-uppercase fw-semibold">IA Generativa</span>
+                            <h3 class="h4 card-title fw-bold">Dra. Arantza Gomez</h3>
+                            <p class="text-muted text-sm">Investigadora Principal en OpenAI, experta en arquitecturas de red multimodales y alineamiento de modelos.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-gomez">Ver Perfil</button>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-sm btn-light">LN</a>
+                                    <a href="#" class="btn btn-sm btn-light">GH</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ponente 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card card h-100">
+                        <img src="assets/images/hero-bg.jpg" class="card-img-top" alt="Dr. Robert Chen" style="height: 220px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge bg-info text-dark mb-2 text-uppercase fw-semibold">Computación Cuántica</span>
+                            <h3 class="h4 card-title fw-bold">Dr. Robert Chen</h3>
+                            <p class="text-muted text-sm">Científico Senior de IBM Quantum, dedicado al desarrollo de algoritmos de corrección de errores cuánticos.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-chen">Ver Perfil</button>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-sm btn-light">LN</a>
+                                    <a href="#" class="btn btn-sm btn-light">TW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ponente 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="custom-card card h-100">
+                        <img src="assets/images/event-bg.jpg" class="card-img-top" alt="Sofia Reyes" style="height: 220px; object-fit: cover;">
+                        <div class="card-body">
+                            <span class="badge bg-info text-dark mb-2 text-uppercase fw-semibold">Web3 & Blockchain</span>
+                            <h3 class="h4 card-title fw-bold">Sofia Reyes</h3>
+                            <p class="text-muted text-sm">Investigadora en Ethereum Foundation, impulsora de protocolos de escalabilidad Capa 2 y zk-rollups.</p>
+                            
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-reyes">Ver Perfil</button>
+                                <div class="d-flex gap-2">
+                                    <a href="#" class="btn btn-sm btn-light">LN</a>
+                                    <a href="#" class="btn btn-sm btn-light">GH</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modales de Bootstrap para Ponentes -->
+    <div class="modal fade text-dark" id="modal-gomez" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">Dra. Arantza Gomez</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Cargo Actual:</strong> Investigadora Principal en OpenAI (San Francisco, CA).</p>
+                    <p>Posee un Doctorado en Ciencias de la Computación de MIT. Su charla magistral versará sobre los próximos desafíos éticos y de alineamiento en el desarrollo de la AGI (Inteligencia Artificial General).</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-dark" id="modal-chen" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">Dr. Robert Chen</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Cargo Actual:</strong> Científico de Algoritmos Cuánticos en IBM Quantum.</p>
+                    <p>Líder del proyecto Qiskit. Compartirá los avances en la comercialización de la computación cuántica y las implicaciones para la criptografía de claves públicas actuales.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade text-dark" id="modal-reyes" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">Sofia Reyes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Cargo Actual:</strong> Core Developer en Ethereum Foundation.</p>
+                    <p>Sofia es ingeniera de software y economista. Explicará los avances del Sharding y los desafíos para masificar las finanzas descentralizadas en dispositivos móviles.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-dark" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-5">
+        <div class="container text-center text-md-start">
+            <div class="border-top border-secondary pt-4 text-center text-muted">
+                <p class="mb-0">&copy; 2026 Technova Summit. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert">
+            <div class="toast-header bg-primary text-white">
+                <strong class="me-auto">Technova Summit</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body bg-white text-dark">
+                ¡Acción realizada con éxito!
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

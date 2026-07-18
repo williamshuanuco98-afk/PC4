@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Citas - Salud 360</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        @media (max-width: 600px) {
+            table.responsive-table-custom, 
+            table.responsive-table-custom thead, 
+            table.responsive-table-custom tbody, 
+            table.responsive-table-custom th, 
+            table.responsive-table-custom td, 
+            table.responsive-table-custom tr {
+                display: block;
+            }
+            table.responsive-table-custom thead {
+                display: none;
+            }
+            table.responsive-table-custom tr {
+                margin-bottom: 15px;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                background-color: white;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            }
+            table.responsive-table-custom td {
+                text-align: right;
+                position: relative;
+                padding-left: 50% !important;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            table.responsive-table-custom td:last-child {
+                border-bottom: none;
+            }
+            table.responsive-table-custom td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: 45%;
+                font-weight: bold;
+                text-align: left;
+                color: #0f172a;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="preloader-wrapper" class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left"><div class="circle"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container nav-wrapper">
+                <a href="index.html" class="brand-logo">🩺 SALUD 360</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger" style="color: #0284c7;"><span style="font-size:24px;">☰</span></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="directorio.html">Médicos</a></li>
+                    <li><a href="reserva.html">Reservar Cita</a></li>
+                    <li class="active"><a href="citas.html">Mis Citas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="directorio.html">Médicos</a></li>
+        <li><a href="reserva.html">Reservar Cita</a></li>
+        <li class="active"><a href="citas.html">Mis Citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="center-align mb-5" style="margin-bottom: 40px;">
+                <span class="badge blue white-text" style="float:none;">Historial y Próximas Citas</span>
+                <h1 class="font-heading fw-bold">Gestión de Citas</h1>
+                <p class="text-muted">Revisa tus citas médicas agendadas, reprograma o cancela si es necesario.</p>
+            </div>
+
+            <!-- Tabla de Citas médica -->
+            <div class="row">
+                <div class="col s12">
+                    <table class="responsive-table-custom striped highlight bg-white border rounded-lg overflow-hidden shadow-sm" style="width: 100%;">
+                        <thead class="grey darken-3 white-text">
+                            <tr>
+                                <th>Fecha & Hora</th>
+                                <th>Médico</th>
+                                <th>Especialidad</th>
+                                <th>Sede</th>
+                                <th>Estado</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Fecha & Hora">25/07/2026 - 16:30</td>
+                                <td data-label="Médico">Dr. Mateo Rojas</td>
+                                <td data-label="Especialidad">Cardiología</td>
+                                <td data-label="Sede">Sede Surco</td>
+                                <td data-label="Estado"><span class="badge green white-text" style="float:none; border-radius:4px; font-weight:bold;">Confirmada</span></td>
+                                <td data-label="Acción">
+                                    <button class="btn btn-small red" onclick="this.parentElement.parentElement.remove(); window.showMaterialToast('Cita cancelada')">Cancelar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Fecha & Hora">28/07/2026 - 10:00</td>
+                                <td data-label="Médico">Dra. Lucía Paz</td>
+                                <td data-label="Especialidad">Pediatría</td>
+                                <td data-label="Sede">Sede Lima Centro</td>
+                                <td data-label="Estado"><span class="badge orange white-text" style="float:none; border-radius:4px; font-weight:bold;">Pendiente</span></td>
+                                <td data-label="Acción">
+                                    <button class="btn btn-small red" onclick="this.parentElement.parentElement.remove(); window.showMaterialToast('Cita cancelada')">Cancelar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer grey darken-4">
+        <div class="container center-align">
+            &copy; 2026 Salud 360. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

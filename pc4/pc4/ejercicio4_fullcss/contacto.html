@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Participación - Ciudad Viva</title>
+    <meta name="description" content="Inscríbete como voluntario, suscríbete al boletín o envía tus consultas sobre el programa de cultura.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span>CIUDAD VIVA</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="agenda.html" class="nav-link">Agenda</a>
+                <a href="detalle.html" class="nav-link">Detalle Evento</a>
+                <a href="lugares.html" class="nav-link">Lugares</a>
+                <a href="galeria.html" class="nav-link">Galería</a>
+                <a href="contacto.html" class="nav-link active">Contacto</a>
+                <a href="agenda.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Ver Eventos</a>
+            </nav>
+
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="nav-mobile-overlay" class="nav-mobile-overlay"></div>
+    <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="agenda.html" class="nav-link">Agenda</a>
+        <a href="detalle.html" class="nav-link">Detalle Evento</a>
+        <a href="lugares.html" class="nav-link">Lugares</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
+        <a href="agenda.html" class="btn btn-primary" style="margin-top: auto;">Ver Eventos</a>
+    </div>
+
+    <main class="py-12">
+        <div class="container">
+            <div class="text-center mb-8">
+                <span class="badge badge-secondary mb-2">PARTICIPACIÓN</span>
+                <h1 class="mb-4">Contacto y Convocatorias</h1>
+                <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Inscríbete como voluntario cultural, envíanos tus sugerencias o suscríbete al boletín informativo.</p>
+            </div>
+
+            <div class="event-info-grid">
+                <section class="event-main-content">
+                    <div class="card mb-8" style="padding: var(--spacing-6);">
+                        <h2 class="mb-4" style="border: none;">Escríbenos una Consulta</h2>
+                        <form data-ajax-fake="true" data-success-msg="¡Gracias! Tu consulta ha sido enviada con éxito.">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Nombre Completo</label>
+                                <input class="form-control" type="text" id="contact-name" placeholder="Escribe tu nombre" required minlength="4">
+                                <span class="form-feedback form-feedback-error">El nombre debe tener al menos 4 caracteres.</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Correo Electrónico</label>
+                                <input class="form-control" type="email" id="contact-email" placeholder="correo@ejemplo.com" required>
+                                <span class="form-feedback form-feedback-error">Por favor, introduce un correo electrónico válido.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="contact-message">Mensaje / Sugerencia</label>
+                                <textarea class="form-control" id="contact-message" rows="4" placeholder="Escribe tu mensaje aquí..." required minlength="10"></textarea>
+                                <span class="form-feedback form-feedback-error">El mensaje debe tener al menos 10 caracteres.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Consulta</button>
+                        </form>
+                    </div>
+
+                    <div class="card" style="padding: var(--spacing-6);">
+                        <h2 class="mb-4" style="border: none;">Voluntariado Cultural 2026</h2>
+                        <p style="color: var(--color-muted); font-size: var(--text-sm); margin-bottom: var(--spacing-4);">Participa activamente en la logística, guiado e información del Festival de Luces y otras actividades.</p>
+                        
+                        <form data-ajax-fake="true" data-success-msg="¡Excelente! Te has registrado en el programa de voluntariado. Te contactaremos pronto.">
+                            <div class="form-group">
+                                <label class="form-label" for="vol-name">Nombre y Apellidos</label>
+                                <input class="form-control" type="text" id="vol-name" placeholder="Escribe tu nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="vol-phone">Teléfono Móvil</label>
+                                <input class="form-control" type="tel" id="vol-phone" placeholder="987654321" required pattern="[0-9]{9}">
+                                <span class="form-feedback form-feedback-error">El teléfono debe tener exactamente 9 dígitos.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="vol-area">Área de Interés</label>
+                                <select class="form-control" id="vol-area" required>
+                                    <option value="">Seleccione un área...</option>
+                                    <option value="guiado">Guiado y Atención de Visitantes</option>
+                                    <option value="logistica">Logística y Soporte de Eventos</option>
+                                    <option value="prensa">Fotografía y Prensa Social</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-secondary" style="width: 100%;">Postular como Voluntario</button>
+                        </form>
+                    </div>
+                </section>
+
+                <aside class="event-sidebar">
+                    <div class="event-sidebar-box" style="background-color: var(--color-dark); color: white;">
+                        <h3 style="color: white; margin-bottom: var(--spacing-2);">Suscríbete al Boletín</h3>
+                        <p style="color: var(--color-border); font-size: var(--text-sm); margin-bottom: var(--spacing-4);">Recibe en tu correo de forma semanal la agenda cultural resumida con accesos directos.</p>
+                        
+                        <form data-ajax-fake="true" data-success-msg="¡Suscrito! Pronto recibirás novedades en tu bandeja.">
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="tu-correo@ejemplo.com" required style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Suscribirme</button>
+                        </form>
+                    </div>
+
+                    <div class="event-sidebar-box">
+                        <h3 style="font-size: var(--text-lg); margin-bottom: var(--spacing-4);">Preguntas Frecuentes</h3>
+                        <div style="display: flex; flex-direction: column; gap: var(--spacing-3);">
+                            <div class="collapsible-item" onclick="this.classList.toggle('active')">
+                                <div class="collapsible-header">
+                                    <span>¿Los eventos tienen costo?</span>
+                                    <span>▼</span>
+                                </div>
+                                <div class="collapsible-body">
+                                    <p style="font-size: var(--text-xs); color: var(--color-muted);">La gran mayoría de los eventos son 100% financiados por el programa municipal y tienen ingreso libre sin costo alguno.</p>
+                                </div>
+                            </div>
+
+                            <div class="collapsible-item" onclick="this.classList.toggle('active')">
+                                <div class="collapsible-header">
+                                    <span>¿Cómo solicito un bus de guiado?</span>
+                                    <span>▼</span>
+                                </div>
+                                <div class="collapsible-body">
+                                    <p style="font-size: var(--text-xs); color: var(--color-muted);">Las reservas se realizan en la pestaña Agenda seleccionando las rutas programadas para los fines de semana.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CIUDAD VIVA<span class="logo-dot">.</span></h3>
+                    <p>Portal Oficial del Programa de Promoción Cultural y Artística Municipal. Transformamos la ciudad a través del arte.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="agenda.html">Agenda de Eventos</a></li>
+                        <li><a href="detalle.html">Detalle de Evento</a></li>
+                        <li><a href="lugares.html">Lugares Culturales</a></li>
+                        <li><a href="galeria.html">Galería de Recorridos</a></li>
+                        <li><a href="contacto.html">Contacto y Convocatorias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. de la Cultura 450, Centro Cívico</p>
+                    <p>📞 (01) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ciudad Viva. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

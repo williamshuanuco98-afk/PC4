@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médicos - Salud 360</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <div id="preloader-wrapper" class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left"><div class="circle"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container nav-wrapper">
+                <a href="index.html" class="brand-logo">🩺 SALUD 360</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger" style="color: #0284c7;"><span style="font-size:24px;">☰</span></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li class="active"><a href="directorio.html">Médicos</a></li>
+                    <li><a href="reserva.html">Reservar Cita</a></li>
+                    <li><a href="citas.html">Mis Citas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li class="active"><a href="directorio.html">Médicos</a></li>
+        <li><a href="reserva.html">Reservar Cita</a></li>
+        <li><a href="citas.html">Mis Citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="center-align mb-5" style="margin-bottom: 40px;">
+                <span class="badge blue white-text" style="float:none;">Staff Profesional</span>
+                <h1 class="font-heading fw-bold">Directorio Médico</h1>
+                <p class="text-muted">Encuentra a tu médico de cabecera buscando por nombre o especialidad.</p>
+            </div>
+
+            <!-- Buscador y filtro -->
+            <div class="row card p-4" style="margin-bottom: 40px;">
+                <div class="input-field col s12 m8">
+                    <input id="search-input" type="text" placeholder="🔍 Escribe el nombre o especialidad del médico...">
+                </div>
+                <div class="input-field col s12 m4">
+                    <select id="sede-filter">
+                        <option value="all" selected>Todas las sedes</option>
+                        <option value="lima">Sede Lima Centro</option>
+                        <option value="surco">Sede Surco</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid de Médicos -->
+            <div class="row">
+                
+                <!-- Médico 1 -->
+                <div class="col s12 m6 l4 filterable-card">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light" style="max-height: 200px; overflow:hidden;">
+                            <img class="activator" src="assets/images/event-bg.jpg" alt="Dr. Mateo Rojas" style="object-fit: cover; height: 100%;">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4 filterable-title" style="font-size: 1.25rem;">Dr. Mateo Rojas<span class="right">⋮</span></span>
+                            <p class="filterable-desc" style="color: var(--color-primary); font-weight: 600;">Cardiólogo</p>
+                            <p class="text-muted text-xs mt-2" style="font-size: 0.8rem; margin-top: 10px;">📍 Sede Surco | CMP 54321</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn modal-trigger" href="#modal-rojas" style="width: 100%;">Ver Perfil</a>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Dr. Mateo Rojas<span class="right">X</span></span>
+                            <p style="margin-top:20px;">Médico egresado de la UNMSM con más de 12 años de experiencia en cardiología intervencionista y docencia universitaria.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Médico 2 -->
+                <div class="col s12 m6 l4 filterable-card">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light" style="max-height: 200px; overflow:hidden;">
+                            <img class="activator" src="assets/images/hero-bg.jpg" alt="Dra. Lucía Paz" style="object-fit: cover; height: 100%;">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4 filterable-title" style="font-size: 1.25rem;">Dra. Lucía Paz<span class="right">⋮</span></span>
+                            <p class="filterable-desc" style="color: var(--color-primary); font-weight: 600;">Pediatra</p>
+                            <p class="text-muted text-xs mt-2" style="font-size: 0.8rem; margin-top: 10px;">📍 Sede Lima Centro | CMP 65432</p>
+                        </div>
+                        <div class="card-action">
+                            <a class="waves-effect waves-light btn modal-trigger" href="#modal-paz" style="width: 100%;">Ver Perfil</a>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Dra. Lucía Paz<span class="right">X</span></span>
+                            <p style="margin-top:20px;">Especialista en nutrición infantil y neonatología. Amplia experiencia en el control y crecimiento infantil.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modales de perfil de médicos -->
+    <div id="modal-rojas" class="modal">
+        <div class="modal-content">
+            <h4 class="font-heading">Perfil: Dr. Mateo Rojas</h4>
+            <p><strong>Especialidad:</strong> Cardiología clínica e intervencionista.</p>
+            <p><strong>Horarios de consulta:</strong> Lunes y Miércoles de 15:00 a 20:00.</p>
+            <p><strong>Logros:</strong> Autor de múltiples artículos sobre salud coronaria en revistas internacionales indexadas.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+            <a href="reserva.html" class="waves-effect waves-light btn">Reservar Cita</a>
+        </div>
+    </div>
+
+    <div id="modal-paz" class="modal">
+        <div class="modal-content">
+            <h4 class="font-heading">Perfil: Dra. Lucía Paz</h4>
+            <p><strong>Especialidad:</strong> Pediatría y Neonatología.</p>
+            <p><strong>Horarios de consulta:</strong> Martes y Jueves de 09:00 a 14:00.</p>
+            <p><strong>Logros:</strong> Expositora principal en el Congreso Nacional de Pediatría del lactante.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+            <a href="reserva.html" class="waves-effect waves-light btn">Reservar Cita</a>
+        </div>
+    </div>
+
+    <footer class="page-footer grey darken-4">
+        <div class="container center-align">
+            &copy; 2026 Salud 360. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

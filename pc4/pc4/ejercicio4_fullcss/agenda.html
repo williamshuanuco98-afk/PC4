@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Eventos - Ciudad Viva</title>
+    <meta name="description" content="Calendario oficial y agenda de actividades culturales en Ciudad Viva. Talleres, teatro, música y paseos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span>CIUDAD VIVA</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="agenda.html" class="nav-link active">Agenda</a>
+                <a href="detalle.html" class="nav-link">Detalle Evento</a>
+                <a href="lugares.html" class="nav-link">Lugares</a>
+                <a href="galeria.html" class="nav-link">Galería</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+                <a href="agenda.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Ver Eventos</a>
+            </nav>
+
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="nav-mobile-overlay" class="nav-mobile-overlay"></div>
+    <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="agenda.html" class="nav-link active">Agenda</a>
+        <a href="detalle.html" class="nav-link">Detalle Evento</a>
+        <a href="lugares.html" class="nav-link">Lugares</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="agenda.html" class="btn btn-primary" style="margin-top: auto;">Ver Eventos</a>
+    </div>
+
+    <main class="py-12">
+        <div class="container">
+            <div class="text-center mb-8">
+                <span class="badge badge-primary mb-2">CALENDARIO MENSUAL</span>
+                <h1 class="mb-4">Agenda Cultural Municipal</h1>
+                <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Filtra por categorías y ubica fácilmente los horarios y sedes de todas las actividades planificadas para este mes.</p>
+            </div>
+
+            <div class="agenda-layout">
+                <aside class="agenda-sidebar">
+                    <h3 style="font-size: var(--text-lg); border-bottom: 2px solid var(--color-border); padding-bottom: var(--spacing-2); margin-bottom: var(--spacing-4);">Filtros de Búsqueda</h3>
+                    <form id="filters-form">
+                        <div class="form-group">
+                            <label class="form-label" for="search-input">Buscar por Nombre</label>
+                            <input class="form-control" type="text" id="search-input" placeholder="Ej. Teatro, Concierto...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="category-select">Categoría</label>
+                            <select class="form-control" id="category-select">
+                                <option value="all">Todas las Categorías</option>
+                                <option value="artes">Artes Escénicas</option>
+                                <option value="musica">Música y Conciertos</option>
+                                <option value="museo">Museos y Visitas</option>
+                                <option value="taller">Talleres y Cursos</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="type-select">Acceso</label>
+                            <select class="form-control" id="type-select">
+                                <option value="all">Cualquier Costo</option>
+                                <option value="gratis">Gratuito</option>
+                                <option value="pago">Ingreso Pagado</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="btn btn-outline" style="width: 100%; margin-top: var(--spacing-2);" onclick="document.getElementById('filters-form').reset(); window.showToast('Filtros restablecidos', 'info');">Limpiar Filtros</button>
+                    </form>
+                </aside>
+
+                <section class="agenda-content">
+                    <div class="tabs-nav">
+                        <span class="tab-btn active" data-tab-group="agenda" data-tab-target="tab-viernes">Viernes 24 Jul</span>
+                        <span class="tab-btn" data-tab-group="agenda" data-tab-target="tab-sabado">Sábado 25 Jul</span>
+                        <span class="tab-btn" data-tab-group="agenda" data-tab-target="tab-domingo">Domingo 26 Jul</span>
+                    </div>
+
+                    <div id="tab-viernes" class="tab-pane active" data-tab-group="agenda">
+                        <table class="agenda-table">
+                            <thead>
+                                <tr>
+                                    <th>Horario</th>
+                                    <th>Actividad</th>
+                                    <th>Lugar / Sede</th>
+                                    <th>Costo</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">09:00 - 13:00</td>
+                                    <td data-label="Actividad" class="filterable-title">Exposición: Pintura Ancestral</td>
+                                    <td data-label="Lugar / Sede">Galería Municipal de Arte</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">15:00 - 17:00</td>
+                                    <td data-label="Actividad" class="filterable-title">Taller: Danza Contemporánea</td>
+                                    <td data-label="Lugar / Sede">Centro Cultural Los Pinos</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">19:00 - 21:00</td>
+                                    <td data-label="Actividad" class="filterable-title">Concierto: Jazz de Invierno</td>
+                                    <td data-label="Lugar / Sede">Teatro Municipal Principal</td>
+                                    <td data-label="Costo"><span class="badge badge-primary">S/. 15.00</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="tab-sabado" class="tab-pane" data-tab-group="agenda">
+                        <table class="agenda-table">
+                            <thead>
+                                <tr>
+                                    <th>Horario</th>
+                                    <th>Actividad</th>
+                                    <th>Lugar / Sede</th>
+                                    <th>Costo</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">10:00 - 12:30</td>
+                                    <td data-label="Actividad" class="filterable-title">Ruta Histórica: Casonas Coloniales</td>
+                                    <td data-label="Lugar / Sede">Punto Encuentro: Plaza de Armas</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">16:00 - 18:00</td>
+                                    <td data-label="Actividad" class="filterable-title">Cuentacuentos Infantiles</td>
+                                    <td data-label="Lugar / Sede">Biblioteca Pública Central</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">19:30 - 22:00</td>
+                                    <td data-label="Actividad" class="filterable-title">Hamlet en el Parque (Teatro)</td>
+                                    <td data-label="Lugar / Sede">Parque del Anfiteatro</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="tab-domingo" class="tab-pane" data-tab-group="agenda">
+                        <table class="agenda-table">
+                            <thead>
+                                <tr>
+                                    <th>Horario</th>
+                                    <th>Actividad</th>
+                                    <th>Lugar / Sede</th>
+                                    <th>Costo</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">11:00 - 13:00</td>
+                                    <td data-label="Actividad" class="filterable-title">Feria Gastronómica y Danza Folclórica</td>
+                                    <td data-label="Lugar / Sede">Plaza de la Cultura</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">15:00 - 17:30</td>
+                                    <td data-label="Actividad" class="filterable-title">Festival Infantil de Títeres</td>
+                                    <td data-label="Lugar / Sede">Auditorio Casa de la Juventud</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                                <tr class="filterable-card">
+                                    <td data-label="Horario">18:00 - 20:30</td>
+                                    <td data-label="Actividad" class="filterable-title">Sinfonía bajo las Estrellas (Lírico)</td>
+                                    <td data-label="Lugar / Sede">Anfiteatro Municipal</td>
+                                    <td data-label="Costo"><span class="badge badge-success">Gratis</span></td>
+                                    <td data-label="Acción"><a href="detalle.html" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: var(--text-xs);">Detalles</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CIUDAD VIVA<span class="logo-dot">.</span></h3>
+                    <p>Portal Oficial del Programa de Promoción Cultural y Artística Municipal. Transformamos la ciudad a través del arte.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="agenda.html">Agenda de Eventos</a></li>
+                        <li><a href="detalle.html">Detalle de Evento</a></li>
+                        <li><a href="lugares.html">Lugares Culturales</a></li>
+                        <li><a href="galeria.html">Galería de Recorridos</a></li>
+                        <li><a href="contacto.html">Contacto y Convocatorias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. de la Cultura 450, Centro Cívico</p>
+                    <p>📞 (01) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ciudad Viva. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

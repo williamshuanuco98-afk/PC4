@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especialidades - Salud 360</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <div id="preloader-wrapper" class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left"><div class="circle"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container nav-wrapper">
+                <a href="index.html" class="brand-logo">🩺 SALUD 360</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger" style="color: #0284c7;"><span style="font-size:24px;">☰</span></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="active"><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="directorio.html">Médicos</a></li>
+                    <li><a href="reserva.html">Reservar Cita</a></li>
+                    <li><a href="citas.html">Mis Citas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="active"><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="directorio.html">Médicos</a></li>
+        <li><a href="reserva.html">Reservar Cita</a></li>
+        <li><a href="citas.html">Mis Citas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="center-align mb-5" style="margin-bottom: 40px;">
+                <span class="badge blue white-text" style="float:none;">Servicios Médicos</span>
+                <h1 class="font-heading fw-bold">Especialidades Médicas</h1>
+                <p class="text-muted">Explora nuestra cartera de servicios médicos organizados por categorías.</p>
+            </div>
+
+            <!-- Tabs de especialidades -->
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs tabs-fixed-width tab-demo z-depth-1 border rounded-lg" style="margin-bottom: 30px;">
+                        <li class="tab col s4"><a class="active" href="#clinica">Área Clínica</a></li>
+                        <li class="tab col s4"><a href="#quirurgica">Área Quirúrgica</a></li>
+                        <li class="tab col s4"><a href="#apoyo">Apoyo Diagnóstico</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tab Clinica -->
+                <div id="clinica" class="col s12">
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">❤️ Cardiología</span>
+                                    <p>Prevención, diagnóstico y tratamiento de enfermedades del corazón y del sistema circulatorio general (hipertensión, arritmias).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">🩺 Medicina Interna</span>
+                                    <p>Atención médica integral del adulto con enfermedades complejas o multisistémicas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Quirurgica -->
+                <div id="quirurgica" class="col s12">
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">🔪 Cirugía General</span>
+                                    <p>Tratamiento quirúrgico de patologías abdominales, de tejidos blandos y del aparato digestivo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">🦴 Traumatología y Ortopedia</span>
+                                    <p>Corrección quirúrgica e inmovilización de fracturas, luxaciones y afecciones musculares/esqueléticas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Apoyo -->
+                <div id="apoyo" class="col s12">
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">🔬 Laboratorio Clínico</span>
+                                    <p>Exámenes de sangre, orina y cultivos biológicos de alta precisión para el correcto diagnóstico médico.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">📷 Radiología & Ecografía</span>
+                                    <p>Estudios por imágenes de rayos X, resonancias, tomografías y ultrasonido.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer grey darken-4">
+        <div class="container center-align">
+            &copy; 2026 Salud 360. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

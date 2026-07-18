@@ -1,0 +1,103 @@
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS MATERIALIZE - SALUD 360 (EJERCICIO 3)
+   ========================================================================== */
+
+/* Variables de Color Marca */
+:root {
+  --color-primary: #0284c7;       /* Sky 600 - Azul Salud */
+  --color-primary-dark: #0369a1;  /* Sky 700 */
+  --color-secondary: #0d9488;     /* Teal 600 */
+  --color-light: #f0f9ff;
+  --color-accent: #0f172a;
+}
+
+body {
+  background-color: #f8fafc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #334155;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Personalizar Componentes de Materialize */
+nav {
+  background-color: white !important;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.05);
+}
+
+nav .brand-logo {
+  color: var(--color-primary) !important;
+  font-weight: bold;
+  font-family: 'Outfit', sans-serif;
+}
+
+nav ul a {
+  color: #64748b !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav ul a:hover, nav ul li.active a {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+}
+
+/* Personalización de Botones */
+.btn, .btn-large {
+  background-color: var(--color-primary) !important;
+  border-radius: 6px !important;
+  text-transform: none !important;
+  font-weight: 600 !important;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: var(--color-primary-dark) !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2) !important;
+}
+
+.btn-flat {
+  color: var(--color-primary) !important;
+}
+
+/* Personalización de Cards */
+.card {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03) !important;
+  border: 1px solid #e2e8f0;
+}
+
+.card .card-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+
+/* Campos de entrada Focus */
+input:focus, textarea:focus {
+  border-bottom: 1px solid var(--color-primary) !important;
+  box-shadow: 0 1px 0 0 var(--color-primary) !important;
+}
+
+/* Preloader custom */
+.preloader-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.preloader-background.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares Culturales - Ciudad Viva</title>
+    <meta name="description" content="Directorio y catálogo de museos, teatros, bibliotecas y centros culturales de la municipalidad.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">
+                <span>CIUDAD VIVA</span><span class="logo-dot">.</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="agenda.html" class="nav-link">Agenda</a>
+                <a href="detalle.html" class="nav-link">Detalle Evento</a>
+                <a href="lugares.html" class="nav-link active">Lugares</a>
+                <a href="galeria.html" class="nav-link">Galería</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+                <a href="agenda.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Ver Eventos</a>
+            </nav>
+
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="nav-mobile-overlay" class="nav-mobile-overlay"></div>
+    <div id="nav-mobile" class="nav-mobile">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="agenda.html" class="nav-link">Agenda</a>
+        <a href="detalle.html" class="nav-link">Detalle Evento</a>
+        <a href="lugares.html" class="nav-link active">Lugares</a>
+        <a href="galeria.html" class="nav-link">Galería</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="agenda.html" class="btn btn-primary" style="margin-top: auto;">Ver Eventos</a>
+    </div>
+
+    <main class="py-12">
+        <div class="container">
+            <div class="text-center mb-8">
+                <span class="badge badge-primary mb-2">INFRAESTRUCTURA CULTURAL</span>
+                <h1 class="mb-4">Lugares y Espacios Culturales</h1>
+                <p style="color: var(--color-muted); max-width: 600px; margin: 0 auto;">Nuestros museos, teatros y galerías están abiertos a la comunidad. Explora los aforos, horarios y direcciones.</p>
+            </div>
+
+            <div class="mb-8" style="max-width: 500px; margin: 0 auto var(--spacing-8);">
+                <div class="form-group">
+                    <input id="search-input" class="form-control" type="text" placeholder="🔍 Buscar por nombre o descripción de lugar..." style="padding: 0.85rem 1.25rem; font-size: var(--text-base); box-shadow: var(--shadow-md);">
+                </div>
+            </div>
+
+            <div class="categories-grid">
+                <article class="card filterable-card">
+                    <div class="card-img-wrapper">
+                        <img class="card-img" src="assets/images/event-bg.jpg" alt="Teatro Municipal">
+                        <span class="badge badge-success card-badge">Abierto</span>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title filterable-title" style="font-size: var(--text-xl); border-bottom: none; padding-bottom: 0;">Teatro Municipal Principal</h2>
+                        <p class="card-text filterable-desc">Histórico recinto fundado en 1920, cuna de óperas, espectáculos sinfónicos y grandes producciones de artes dramáticas.</p>
+                        
+                        <div style="font-size: var(--text-xs); color: var(--color-muted); margin-bottom: var(--spacing-4);">
+                            <p><strong>📍 Dirección:</strong> Jirón Ica 377, Centro Cívico</p>
+                            <p><strong>👥 Aforo Máximo:</strong> 850 Personas</p>
+                            <p><strong>⏰ Horario:</strong> Mar - Dom: 16:00 - 22:00</p>
+                        </div>
+                        
+                        <button class="btn btn-primary" style="width: 100%;" onclick="openModal('modal-teatro')">Más Información</button>
+                    </div>
+                </article>
+
+                <article class="card filterable-card">
+                    <div class="card-img-wrapper">
+                        <img class="card-img" src="assets/images/hero-bg.jpg" alt="Museo Histórico">
+                        <span class="badge badge-success card-badge">Abierto</span>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title filterable-title" style="font-size: var(--text-xl); border-bottom: none; padding-bottom: 0;">Museo de la Historia Local</h2>
+                        <p class="card-text filterable-desc">Colecciones arqueológicas de las culturas prehispánicas que habitaron el valle, junto a pinturas y objetos del periodo colonial.</p>
+                        
+                        <div style="font-size: var(--text-xs); color: var(--color-muted); margin-bottom: var(--spacing-4);">
+                            <p><strong>📍 Dirección:</strong> Av. Petit Thouars 4500</p>
+                            <p><strong>👥 Aforo Máximo:</strong> 300 Personas</p>
+                            <p><strong>⏰ Horario:</strong> Lun - Sáb: 09:00 - 18:00</p>
+                        </div>
+                        
+                        <button class="btn btn-primary" style="width: 100%;" onclick="openModal('modal-museo')">Más Información</button>
+                    </div>
+                </article>
+
+                <article class="card filterable-card">
+                    <div class="card-img-wrapper">
+                        <img class="card-img" src="assets/images/event-bg.jpg" alt="Centro Cultural">
+                        <span class="badge badge-secondary card-badge" style="background-color: var(--color-warning); color: white;">En Mantenimiento</span>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title filterable-title" style="font-size: var(--text-xl); border-bottom: none; padding-bottom: 0;">Centro Cultural Los Pinos</h2>
+                        <p class="card-text filterable-desc">Espacio recreativo y artístico donde se dictan los talleres libres de guitarra, artes plásticas y ajedrez para niños.</p>
+                        
+                        <div style="font-size: var(--text-xs); color: var(--color-muted); margin-bottom: var(--spacing-4);">
+                            <p><strong>📍 Dirección:</strong> Calle Los Robles 210, Urb. Los Pinos</p>
+                            <p><strong>👥 Aforo Máximo:</strong> 150 Personas</p>
+                            <p><strong>⏰ Horario:</strong> Lun - Vie: 08:00 - 17:00</p>
+                        </div>
+                        
+                        <button class="btn btn-outline" style="width: 100%;" onclick="openModal('modal-pinos')">Más Información</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal-teatro" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Detalles del Teatro Municipal</h3>
+                <span class="modal-close" onclick="closeModal('modal-teatro')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4"><strong>Servicios Disponibles:</strong> Boletería física y virtual, cafetería en el foyer principal, acceso habilitado para sillas de ruedas, guardarropa y estacionamiento de bicicletas gratuito.</p>
+                <p class="mb-4">El teatro municipal cuenta con equipamiento acústico renovado e iluminación escenográfica inteligente LED que ahorra hasta un 65% de energía, alineándose con las políticas de sostenibilidad.</p>
+                <div style="display: flex; gap: var(--spacing-3); justify-content: flex-end;">
+                    <button class="btn btn-outline" onclick="closeModal('modal-teatro')">Cerrar</button>
+                    <a href="agenda.html" class="btn btn-primary">Ver Agenda del Teatro</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-museo" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Detalles del Museo de Historia</h3>
+                <span class="modal-close" onclick="closeModal('modal-museo')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4"><strong>Servicios Disponibles:</strong> Visitas guiadas en español, quechua e inglés (previa reserva), tienda de souvenirs, biblioteca histórica especializada en patrimonio y talleres educativos los fines de semana.</p>
+                <p class="mb-4">El ingreso general es libre para los residentes del distrito mostrando su documento nacional de identidad físico o digital.</p>
+                <div style="display: flex; gap: var(--spacing-3); justify-content: flex-end;">
+                    <button class="btn btn-outline" onclick="closeModal('modal-museo')">Cerrar</button>
+                    <a href="galeria.html" class="btn btn-primary">Ver Fotos Históricas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-pinos" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Centro Cultural Los Pinos</h3>
+                <span class="modal-close" onclick="closeModal('modal-pinos')">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p class="mb-4"><strong>Aviso Importante:</strong> El local se encuentra en etapa de ampliación de aulas para los talleres municipales de danza folclórica y laboratorio audiovisual digital.</p>
+                <p class="mb-4">Las clases programadas se realizarán de manera virtual o en los locales comunales del sector 3.</p>
+                <div style="display: flex; gap: var(--spacing-3); justify-content: flex-end;">
+                    <button class="btn btn-primary" style="width:100%;" onclick="closeModal('modal-pinos')">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>CIUDAD VIVA<span class="logo-dot">.</span></h3>
+                    <p>Portal Oficial del Programa de Promoción Cultural y Artística Municipal. Transformamos la ciudad a través del arte.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Secciones</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="agenda.html">Agenda de Eventos</a></li>
+                        <li><a href="detalle.html">Detalle de Evento</a></li>
+                        <li><a href="lugares.html">Lugares Culturales</a></li>
+                        <li><a href="galeria.html">Galería de Recorridos</a></li>
+                        <li><a href="contacto.html">Contacto y Convocatorias</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>📍 Av. de la Cultura 450, Centro Cívico</p>
+                    <p>📞 (01) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ciudad Viva. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

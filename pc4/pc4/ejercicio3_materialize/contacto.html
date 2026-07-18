@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Salud 360</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <div id="preloader-wrapper" class="preloader-background">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left"><div class="circle"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="container nav-wrapper">
+                <a href="index.html" class="brand-logo">🩺 SALUD 360</a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger" style="color: #0284c7;"><span style="font-size:24px;">☰</span></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="directorio.html">Médicos</a></li>
+                    <li><a href="reserva.html">Reservar Cita</a></li>
+                    <li><a href="citas.html">Mis Citas</a></li>
+                    <li class="active"><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="especialidades.html">Especialidades</a></li>
+        <li><a href="directorio.html">Médicos</a></li>
+        <li><a href="reserva.html">Reservar Cita</a></li>
+        <li><a href="citas.html">Mis Citas</a></li>
+        <li class="active"><a href="contacto.html">Contacto</a></li>
+    </ul>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="center-align mb-5" style="margin-bottom: 40px;">
+                <span class="badge blue white-text" style="float:none;">Atención al Paciente</span>
+                <h1 class="font-heading fw-bold">Contacto & Sedes</h1>
+                <p class="text-muted">Estamos para ayudarte. Comunícate con nuestros centros de salud.</p>
+            </div>
+
+            <div class="row">
+                <!-- Formulario -->
+                <div class="col s12 m6">
+                    <div class="card p-4">
+                        <h4 class="font-heading mb-4">Envíanos tu Consulta</h4>
+                        <form data-ajax-fake="true" data-success-msg="¡Gracias! Mensaje enviado correctamente. Nos comunicaremos contigo.">
+                            <div class="input-field">
+                                <input id="name" type="text" required>
+                                <label for="name">Nombre Completo</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="email" type="email" required>
+                                <label for="email">Correo Electrónico</label>
+                            </div>
+                            <div class="input-field">
+                                <textarea id="message" class="materialize-textarea" required></textarea>
+                                <label for="message">Mensaje / Requerimiento</label>
+                            </div>
+                            <button class="btn waves-effect waves-light btn-large" type="submit" style="width: 100%;">
+                                Enviar Consulta
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Sedes e Info -->
+                <div class="col s12 m6">
+                    <div class="card p-4">
+                        <h4 class="font-heading mb-3">Nuestra Sede Principal</h4>
+                        <p class="text-muted"><strong>Dirección:</strong> Av. Arequipa 1450, Lince, Lima</p>
+                        <p class="text-muted"><strong>Horario:</strong> Lun - Sáb: 07:00 AM - 09:00 PM</p>
+                        <p class="text-muted"><strong>Central Telefónica:</strong> (01) 619-3000</p>
+                    </div>
+
+                    <!-- FAQs en Acordeón Materialize -->
+                    <h4 class="font-heading mb-3" style="font-size: 1.5rem; margin-top:30px;">Preguntas Frecuentes</h4>
+                    <ul class="collapsible z-depth-1 border rounded-lg">
+                        <li>
+                            <div class="collapsible-header">💬 ¿Aceptan seguros de salud?</div>
+                            <div class="collapsible-body bg-white"><span>Sí, trabajamos con las principales aseguradoras nacionales y planes corporativos autogestionados.</span></div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">💬 ¿Cómo cancelo una cita?</div>
+                            <div class="collapsible-body bg-white"><span>Puedes cancelarla desde la pestaña 'Mis Citas' ingresando con tu documento o llamando a nuestra central.</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer grey darken-4">
+        <div class="container center-align">
+            &copy; 2026 Salud 360. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
